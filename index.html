@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <section style="max-width: 600px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <p>
+    Hi ! I’m <strong>Rahul</strong>, a passionate QA with experience in testing web, mobile applications and backend systems that power enterprise SaAS products.
+    I enjoy building robust test automation frameworks and engage in system design discussions.
+    When I’m not coding or testing applications, you can find me reading about finance , policy , politics ,  exploring tech trends, or playing badminton.
+  </p>
+  <p>
+    This page is a simple way for you to reach out to me. Feel free to drop a message using the form below!
+  </p>
+</section>
+  <title>Connect with Rahul</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fill this form to connect with me !</h1>
+  <form action="https://formspree.io/f/xzzgjbvq" method="POST">
+    <label for="name">Name:</label>
+    <input name="Name" id="name" required>
+
+    <label for="phone">Phone:</label>
+    <input name="Phone" id="phone" type="tel" required pattern="^\+?[0-9\s\-]{7,15}$">
+
+    <label for="email">Email:</label>
+    <input name="Email" id="email" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+    <label for="linkedin">LinkedIn URL:</label>
+    <input name="LinkedIn" id="linkedin" type="url" pattern="^https:\/\/(www\.)?linkedin\.com\/.*$">
+
+    <label for="message">Comment:</label>
+    <textarea name="Comment" id="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</body>
+</html>
