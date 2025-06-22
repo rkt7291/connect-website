@@ -1,65 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <section style="max-width: 600px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <p>
-    Hi ! I’m <strong>Rahul</strong>, a passionate QA with experience in testing web, mobile applications and backend systems that power enterprise SaAS products.
-    I enjoy building robust test automation frameworks and engage in system design discussions.
-    When I’m not coding or testing applications, you can find me reading about finance , policy , politics ,  exploring tech trends, or playing badminton.
-  </p>
-  <p>
-    This page is a simple way for you to reach out to me. Feel free to drop a message using the form below!
-  </p>
-</section>
-  <title>Connect with Rahul</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background: #f9f9f9;
+    <style>
+    /* Global Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #e0f7fa, #fce4ec, #e1bee7, #f8bbd0);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #333;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, h2 {
       text-align: center;
+      color: #4a148c;
+      margin-bottom: 1rem;
       font-size: 24px;
     }
-    form {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    h2 {
+      color: #006064;
     }
+
+    section, form {
+      background: white;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover, form:hover {
+      transform: translateY(-4px);
+    }
+
     label {
       display: block;
       margin-top: 1rem;
+      font-weight: 600;
+      color: #333;
     }
+
     input, textarea {
       width: 100%;
       padding: 0.75rem;
       margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
     }
+
+    input:focus, textarea:focus {
+      border-color: #4a148c;
+      outline: none;
+    }
+
     button {
       margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
-      background: #007BFF;
+      background: #4a148c;
       color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
+      font-size: 1rem;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     button:hover {
-      background: #0056b3;
+      background: #6a1b9a;
+    }
+    .about-me {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: 2rem auto;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap; /* ensures responsiveness */
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .about-img img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .about-img img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 800px) {
+      .about-me {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img {
+        margin-top: 1rem;
+      }
     }
   </style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <section class="about-me">
+    <div class="about-text">
+      <p>
+        Hi ! I’m <strong>Rahul</strong>, a passionate QA with experience in testing web, mobile and enterprise applications and their underlying backend systems.
+        I enjoy building robust test automation frameworks and engage in system design discussions.
+        When I’m not coding or testing applications, you can find me reading about finance , policy , politics ,  exploring tech trends, or playing badminton.
+      </p>
+    </div>
+    <div class="about-img">
+      <img src="profile.jpeg" alt="My Profile Picture" />
+    </div>
+</section>
+  <title>Connect with Rahul</title> 
 </head>
 <body>
 
-  <h1>Fill this form to connect with me !</h1>
+  <h1>Let’s connect — just drop your details below!</h1>
   <form action="https://formspree.io/f/xzzgjbvq" method="POST">
     <label for="name">Name:</label>
     <input name="Name" id="name" required>
@@ -73,8 +163,8 @@
     <label for="linkedin">LinkedIn URL:</label>
     <input name="LinkedIn" id="linkedin" type="url" pattern="^https:\/\/(www\.)?linkedin\.com\/.*$">
 
-    <label for="message">Comment:</label>
-    <textarea name="Comment" id="message" rows="5" required></textarea>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
 
     <button type="submit">Send Message</button>
   </form>
